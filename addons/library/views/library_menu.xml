@@ -1,0 +1,12 @@
+<odoo>
+    <!-- Menu de l'application rentacar -->
+    <menuitem id="menu_library" name="Library !" />
+    <!-- Action pour ouvrir la liste des véhicules -->
+    <record id="action_library_book" model="ir.actions.act_window">
+        <field name="name">Library Books</field>
+        <field name="res_model">library.book</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- Lien de menu qui utilise l'action qui affiche la liste des véhicules -->
+    <menuitem id="menu_library_book" name="Book" parent="menu_library" action="action_library_book" sequence="10"  />
+</odoo>

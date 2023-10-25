@@ -14,7 +14,7 @@ services:
       - HOST=db
       - USER=odoo
       - PASSWORD=myodoo
-    command: -d odoo_v16 -u library --dev=all
+    command: -d odoo_v16 -u library --dev xml
   db:
     user: root
     image: postgres:13
