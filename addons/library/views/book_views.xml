@@ -17,8 +17,30 @@
                         </group>
                     </group>
                 </sheet>
-
             </form>
+        </field>
+    </record>
+    <record id="view_tree_book" model="ir.ui.view">
+        <field name="name">Book list</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id"/>
+                <field name="name"/>
+                <field name="isbn"/>
+                <field name="date_published"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_search_book" model="ir.ui.view">
+        <field name="name">Book Filter</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="isbn"/>
+                <filter name="filter_sortie_recentes" string="Sorties récentes" domain="[('date_published','>',(context_today() - relativedelta(months=12)).strftime('%Y-%m-%d')) ]"/>
+            </search>
         </field>
     </record>
 </odoo>
