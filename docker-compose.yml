@@ -14,7 +14,7 @@ services:
       - HOST=db
       - USER=odoo
       - PASSWORD=myodoo
-    # command: -d odoo_v16 -i library --dev=all (ne pas decommenter avant la création de la BDD)
+    command: -d odoo_v16 -u library --dev=all
   db:
     user: root
     image: postgres:13
