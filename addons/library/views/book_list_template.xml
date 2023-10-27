@@ -1,0 +1,25 @@
+<odoo>
+    <template id="book_list_template" name="Books List">
+        <t t-call="website.layout">
+            <div class="oe_structure"/>
+            <div id="wrap" class="container">
+                <h1>List of books</h1>
+                <div class="row">
+                    <t t-foreach="books" t-as="book">
+                        <h1 t-field="book.name"></h1>
+
+                        <p>ISBN :
+                            <span t-field="book.isbn"></span>
+                        </p>
+                        <p>
+                            <a t-attf-href="/library/allbooks/#{book.id}" class="btn btn-primary">
+                                Détail
+                                <i class="fa fa-eye"/>
+                            </a>
+                        </p>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

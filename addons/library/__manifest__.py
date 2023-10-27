@@ -29,6 +29,8 @@
         'views/book_views.xml',
         'views/views.xml',
         'views/templates.xml',
+        'views/book_detail_template.xml',
+        'views/book_list_template.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
