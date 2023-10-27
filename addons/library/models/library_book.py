@@ -8,6 +8,7 @@ class book(models.Model):
     # ---------------------------------------- Private Attributes ---------------------------------
     _name = 'library.book'
     _description = 'Book of library'
+    _parent_store = True
 
     # --------------------------------------- Fields Declaration ----------------------------------
 
@@ -17,6 +18,29 @@ class book(models.Model):
     active = fields.Boolean("Actif ?", default=True)
     date_published = fields.Date(string="Publish date")
     image = fields.Binary("Cover")
+
+    # Relational
+    notice_ids = fields.One2many(
+        "library.notice",
+        "book_id",
+        string="Book's notices")
+
+    language_ids = fields.Many2many(
+        "library.language",
+        string="Book's languages"
+    )
+
+    parent_id = fields.Many2one(
+        "library.book",
+        "Book's parent",
+        ondelete="restrict")
+
+    parent_path = fields.Char(index=True)
+
+    child_id = fields.Many2one(
+        "library.book",
+        "Book's child",
+        ondelete="restrict")
 
 
     def _check_isbn(self):

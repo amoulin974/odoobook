@@ -18,6 +18,27 @@
                             <field name="active"/>
                             <field name="date_published"/>
                         </group>
+                        <notebook>
+                            <page name="page1" string="In the same series">
+                                <H2>Read before</H2>
+                                <field name="parent_id" widget="many2one"/>
+                                <H2>Read After</H2>
+                                <field name="child_id" />
+
+                            </page>
+                            <page name="page2" string="Notices">
+                                <field name="notice_ids" widget="many2many">
+                                    <tree editable="bottom">
+                                        <field name="text"/>
+                                        <field name="note" />
+                                    </tree>
+
+                                </field>
+                            </page>
+                            <page name="page3" string="Languages available">
+                                <group><field name="language_ids" widget="many2many_tags"/></group>
+                            </page>
+                        </notebook>
                     </group>
                 </sheet>
             </form>
@@ -32,6 +53,7 @@
                 <field name="name"/>
                 <field name="isbn"/>
                 <field name="date_published"/>
+                <field name="language_ids" widget="many2many_tags"/>
             </tree>
         </field>
     </record>

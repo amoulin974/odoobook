@@ -7,6 +7,22 @@
         <field name="res_model">library.book</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <!-- Action pour ouvrir la liste des avis -->
+    <record id="action_library_notice" model="ir.actions.act_window">
+        <field name="name">Library notices</field>
+        <field name="res_model">library.notice</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Action pour ouvrir la liste des langages -->
+    <record id="action_library_language" model="ir.actions.act_window">
+        <field name="name">Library languages</field>
+        <field name="res_model">library.language</field>
+        <field name="view_mode">tree,form</field>
+    </record>
     <!-- Lien de menu qui utilise l'action qui affiche la liste des véhicules -->
-    <menuitem id="menu_library_book" name="Book" parent="menu_library" action="action_library_book" sequence="10"  />
+    <menuitem id="menu_library_book" name="Books" parent="menu_library" action="action_library_book" sequence="10"  />
+    <menuitem id="menu_library_notice" name="Notices" parent="menu_library" action="action_library_notice" sequence="10"  />
+    <menuitem id="menu_library_language" name="Languages" parent="menu_library" action="action_library_language" sequence="10"  />
 </odoo>
