@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': "library",
 
@@ -36,3 +35,4 @@
         'demo/demo.xml',
     ],
 }
+# -*- coding: utf-8 -*-

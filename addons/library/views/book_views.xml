@@ -4,6 +4,9 @@
         <field name="model">library.book</field>
         <field name="arch" type="xml">
             <form string="book">
+                <header>
+                    <button name="button_check_isbn" type="object" string="Check isbn" />
+                </header>
                 <sheet>
                     <group name="group_line">
                         <group name="group_column_left">
