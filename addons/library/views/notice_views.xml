@@ -1,0 +1,26 @@
+<odoo>
+    <record id="view_form_notice" model="ir.ui.view">
+        <field name="name">Notice form</field>
+        <field name="model">library.language</field>
+        <field name="arch" type="xml">
+            <form string="notice">
+                <sheet>
+                    <field name="text"/>
+                    <field name="note"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_form_notice" model="ir.ui.view">
+            <field name="name">Notice form</field>
+            <field name="model">library.notice</field>
+            <field name="arch" type="xml">
+                <tree string="notice">
+                    <sheet>
+                        <field name="text"/>
+                        <field name="note"/>
+                    </sheet>
+                </tree>
+            </field>
+        </record>
+</odoo>

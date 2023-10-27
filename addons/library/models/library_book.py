@@ -42,6 +42,14 @@ class book(models.Model):
         "Book's child",
         ondelete="restrict")
 
+    #compute
+    nb_notice=fields.Integer(compute="_nb_notice", string="number of notices")
+
+    @api.depends('nb_notice')
+    def _nb_notice(self):
+
+        for book in self:
+            book.nb_notice=len(book.notice_ids)
 
     def _check_isbn(self):
         self.ensure_one()  # vérifie que quel self contient 1 seul record.
