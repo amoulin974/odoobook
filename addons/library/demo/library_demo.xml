@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+
+          <record id="library_language_001" model="library.language">
+            <field name="name">Italien</field>
+            <field name="flag" type="base64" file="library/static/photos/italy.png"></field>
+            <field name="book_ids" eval="[(4, ref('library_book_001')),(4, ref('library_book_002'))]"/>
+          </record>
+
+          <record id="library_language_002" model="library.language">
+            <field name="name">Allemand</field>
+            <field name="flag" type="base64" file="library/static/photos/deutch.png"></field>
+            <field name="book_ids" eval="[(4, ref('library_book_001'))]"/>
+          </record>
+
+
+
+    </data>
+</odoo>

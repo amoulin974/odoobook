@@ -36,7 +36,9 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'demo/library.book.csv',
+        'demo/library.notice.csv',
+        'demo/library_demo.xml',
     ],
 }
 # -*- coding: utf-8 -*-
