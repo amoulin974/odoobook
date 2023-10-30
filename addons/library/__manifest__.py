@@ -28,6 +28,7 @@
         'views/library_menu.xml',
         'views/book_views.xml',
         'views/language_views.xml',
+        'views/notice_views.xml',
         'views/views.xml',
         'views/templates.xml',
         'views/book_detail_template.xml',

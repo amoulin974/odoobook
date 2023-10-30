@@ -1,26 +1,30 @@
 <odoo>
     <record id="view_form_notice" model="ir.ui.view">
         <field name="name">Notice form</field>
-        <field name="model">library.language</field>
+        <field name="model">library.notice</field>
         <field name="arch" type="xml">
             <form string="notice">
                 <sheet>
-                    <field name="text"/>
-                    <field name="note"/>
+                    <group>
+                        <field name="text"/>
+                        <field name="note"/>
+                        <field name="book_id" widget="many2one"/>
+                        <field name="book_cover" widget="image" options='{"size": [150, 140]}'/>
+                    </group>
                 </sheet>
             </form>
         </field>
     </record>
-    <record id="view_form_notice" model="ir.ui.view">
-            <field name="name">Notice form</field>
-            <field name="model">library.notice</field>
-            <field name="arch" type="xml">
-                <tree string="notice">
-                    <sheet>
-                        <field name="text"/>
-                        <field name="note"/>
-                    </sheet>
-                </tree>
-            </field>
-        </record>
+    <record id="view_tree_notice" model="ir.ui.view">
+        <field name="name">Notice tree</field>
+        <field name="model">library.notice</field>
+        <field name="arch" type="xml">
+            <tree string="notice">
+                <field name="id"/>
+                <field name="book_id"/>
+                <field name="text"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
 </odoo>

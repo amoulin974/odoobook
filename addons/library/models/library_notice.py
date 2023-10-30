@@ -12,9 +12,12 @@ class notice(models.Model):
     # --------------------------------------- Fields Declaration ----------------------------------
 
     # Basic
-    text = fields.Html("text")
+    text = fields.Html("Text of notice")
     note = fields.Integer("Note / 5")
     active = fields.Boolean("Actif ?", default=True)
 
     #relational
     book_id = fields.Many2one("library.book", string="Book")
+
+    #related
+    book_cover=fields.Binary(related="book_id.image", string="book_cover")
